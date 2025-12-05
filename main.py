@@ -26,7 +26,7 @@ run_analysis = False
 
 # CHẾ ĐỘ 1: NHẬP TÊN
 if mode == "Texting":
-    search_query = st.text_input("Enter the character name  (Ex: Tanjirou, Edogawa Conan,...):")
+    search_query = st.text_input("Enter the character name  (E.g: Tanjirou, Edogawa Conan,...):")
     
     # hộp chọn (Dropdown)
     if search_query:
