@@ -227,6 +227,9 @@ elif mode == "Genre":
     if not genre_map:
         st.error(f"⚠️ Unable to load the genre list {content_type} from Jikan API!")
     else:
+        # loại bỏ các genre không lành mạnh
+        excluded_genres = ["Hentai", "Ecchi"]
+        genre_map = {k: v for k, v in genre_map.items() if v not in excluded_genres}
         # tạo danh sách genres từ API (ID: Name)
         genre_options = {v: k for k, v in genre_map.items()}  # {Name: ID}
         genre_names = sorted(genre_options.keys())
